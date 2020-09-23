@@ -32,7 +32,7 @@ lsSessionKey = function(action = "set",
 
     } else if (action %in% c("get", "set", "obtain")) {
 
-        params = list(admin = user, password = pass)
+        params = list(admin = user, password = pass, plugin = "AuthLDAP")
 
         if (verbose == TRUE)
             cat('Obtaining session key...\n')
