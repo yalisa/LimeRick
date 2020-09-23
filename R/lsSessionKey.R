@@ -11,6 +11,7 @@ lsSessionKey = function(action = "set",
                         lsAPIurl = getOption("lsAPIurl"),
                         user = getOption("lsUser"),
                         pass = getOption("lsPass"),
+                        AuthPlugin = getOption("lsPlugin"),
                         verbose = TRUE,
                         sessionType = "global"
                         ){
@@ -32,7 +33,7 @@ lsSessionKey = function(action = "set",
 
     } else if (action %in% c("get", "set", "obtain")) {
 
-        params = list(admin = user, password = pass, plugin = "AuthLDAP")
+        params = list(admin = user, password = pass, plugin = AuthPlugin)
 
         if (verbose == TRUE)
             cat('Obtaining session key...\n')
